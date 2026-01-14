@@ -16,7 +16,7 @@
       <a
         href="tel:+919354902932"
         class="inline-block bg-dark rounded text-white md:px-6 px-2 py-2.5 font-bold text-sm uppercase hover:bg-black transition">
-        Inquire Now
+        Enquiry Now
       </a>
       <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden text-2xl">

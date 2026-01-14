@@ -572,7 +572,7 @@
 </section>
 <section id="contact" class="py-20 px-30 bg-dark text-white">
 <div
-  class="relative left-1/3 max-w-3xl w-full h-[520px] rounded-2xl overflow-hidden
+  class="relative max-w-3xl w-full h-[520px] rounded-2xl overflow-hidden
          bg-[url('')] bg-cover bg-center">
 
   <!-- LEFT OVERLAY -->
