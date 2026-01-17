@@ -5,7 +5,7 @@
     <img src="assets/img/whatapp-image.webp" alt="WhatsApp" class="z-10">
     <span class="outer-ring"></span>
   </a>
-  <a href="https://"
+  <a href="tel:+919873702365"
     class="whatsapp-btn w-12 h-12 rounded-full flex items-center justify-center relative mt-2">
     <img src="assets/img/Call-Now.webp" alt="Call Now" class="z-10">
     <span class="outer-ring"></span>
