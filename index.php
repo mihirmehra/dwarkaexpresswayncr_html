@@ -3,7 +3,9 @@
 
 <section class="relative h-80 md:h-[100vh] pt-16 md:pt-20">
 		<video src="assets/img/banner-vid.mp4" autoplay muted loop class="object-cover w-full h-full"></video>
-    <div class="absolute w-full h-full top-0 inset-0 bg-white/20"></div>
+    <div class="absolute w-full h-full top-0 inset-0 bg-white/10"></div>
+     
+  
 </section>
  <form
   id="formclose" action="email.php" method="POST"
@@ -74,19 +76,52 @@
 </form>
 
 <section id="projects" class="py-20 bg-lightGrey">
-	<div class="container mx-auto px-4">
-		<div class="flex flex-col md:flex-row justify-between items-end mb-12">
-			<div>
-				<h2 class="text-primary font-bold uppercase tracking-widest">Our Portfolio</h2>
-				<h3 class="text-4xl md:text-5xl uppercase leading-none">Featured Projects on Dwarka Expressway</h3>
+ <!-- FILTER BAR -->
+ 
+ 
+ <div class="container mx-auto px-4">
+   <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+     <div>
+       <h2 class="text-primary font-bold uppercase tracking-widest">Our Portfolio</h2>
+        <h3 class=" text-4xl md:text-5xl uppercase leading-none">Featured Projects on Dwarka Expressway</h3>
 			</div>
 			<!-- <p class="text-gray-500 max-w-xs mt-4 md:mt-0">Handpicked luxury residences offering the best ROI and lifestyle.</p> -->
 		</div>
-       <div class="max-w-7xl mx-auto ">
+
+      <div class="w-150 mx-auto bg-white">
+         <div class="rounded-2xl shadow p-6 mb-5">
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+         
+             <!-- Project Name -->
+             <div class="relative">
+               <input id="projectFilter" type="text" placeholder="Search Project Name"
+                 class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary">
+               <ul id="projectSuggestions"
+                 class="absolute z-10 bg-white border w-full mt-1 rounded-lg hidden max-h-40 overflow-auto"></ul>
+             </div>
+         
+             <!-- Location -->
+             <input id="locationFilter" type="text" placeholder="Search Sector / Location"
+               class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary">
+         
+             <!-- Budget -->
+             <select id="budgetFilter"
+               class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary">
+               <option value="">Select Budget</option>
+               <option value="1">Under ₹1 Cr</option>
+               <option value="1-1.5">₹1 – ₹1.5 Cr</option>
+               <option value="1.5-2">₹1.5 – ₹2 Cr</option>
+               <option value="2+">Above ₹2 Cr</option>
+             </select>
+         
+           </div>
+         </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
       <!-- CARD 1 -->
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="DLF The Sky Court"
+      data-location="Sector 86"
+      data-price="2.35">
         <div class="relative">
           <img src="assets/img/proj/p-1.png"
                class="h-56 w-full object-cover" />
@@ -112,7 +147,11 @@
 		  </button>
         </div>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="DLF The Ultima"
+      data-location="Sector 104"
+      data-price="1.7">
         <div class="relative">
           <img src="assets/img/proj/p-2.png"
                class="h-56 w-full object-cover" />
@@ -139,7 +178,9 @@
 
         </div>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Godrej Meridien"
+      data-location="Sector 106"
+      data-price="1.3">
         <div class="relative">
           <img src="assets/img/proj/p-3.png"
                class="h-56 w-full object-cover" />
@@ -166,7 +207,9 @@
 
         </div>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Godrej Summit"
+      data-location="Sector 104"
+      data-price="1">
         <div class="relative">
           <img src="assets/img/proj/p-4.png"
                class="h-56 w-full object-cover" />
@@ -194,7 +237,9 @@
         </div>
       </div>
       
-	  <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+	  <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Sobha City"
+      data-location="Sector 108"
+      data-price="1.5">
   <!-- Sobha City -->
   <div class="relative">
     <img src="assets/img/proj/p-5.png"
@@ -221,7 +266,9 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Omaxe Dwarka Heights"
+      data-location="Sector 108"
+      data-price="0.75">
   <!-- Omaxe Dwarka Heights -->
   <div class="relative">
     <img src="assets/img/proj/p-6.png"
@@ -248,7 +295,9 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Omaxe New Heights"
+      data-location="Sector 108"
+      data-price="0.5">
   <!-- Omaxe New Heights -->
   <div class="relative">
     <img src="assets/img/proj/p-7.png"
@@ -275,7 +324,9 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Emaar Palm Hills"
+      data-location="Sector 77"
+      data-price="1.8">
   <!-- Emaar Palm Hills -->
   <div class="relative">
     <img src="assets/img/proj/p-8.png"
@@ -302,7 +353,9 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Shapoorji Pallonji Joyville"
+      data-location="Sector 102"
+      data-price="0.95">
   <!-- Shapoorji Pallonji Joyville -->
   <div class="relative">
     <img src="assets/img/proj/p-9.png"
@@ -329,7 +382,9 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Tata Raisina Residency"
+      data-location="Sector 59"
+      data-price="1.2">
   <!-- Tata Raisina Residency -->
   <div class="relative">
     <img src="assets/img/proj/p-10.png"
@@ -356,7 +411,9 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card" data-name="Mahindra Luminare"
+      data-location="Sector 59"
+      data-price="2.5">
   <!-- Mahindra Luminare -->
   <div class="relative">
     <img src="assets/img/proj/p-11.png"
@@ -383,32 +440,6 @@
   </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-  <!-- Ansal Royal Heritage -->
-  <div class="relative">
-    <img src="assets/img/proj/p-12.png"
-         class="h-56 w-full object-cover" />
-    <span class="absolute top-3 left-3 bg-dark  text-white text-sm font-extralight px-3 py-1 rounded-full">
-      Affordable
-    </span> 
-  </div>
-
-  <div class="p-5 space-y-2">
-    <h3 class="text-lg font-semibold">
-      Ansal Royal Heritage
-    </h3>
-    <p class="text-sm">
-      <i class="fa-solid fa-location-pin-lock text-lg"></i> Sector 109, Dwarka Expressway
-    </p>
-    <p class="text-lg font-bold text-red-700 mt-2">
-      ₹ 70 Lakhs*
-    </p>
-    <hr class="my-3">
-    <button onclick="showForm()" class="text-primary font-bold text-sm uppercase hover:underline">
-      View Project
-    </button>
-  </div>
-</div>
 </div>
 </section>
  <section

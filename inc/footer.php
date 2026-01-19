@@ -1,17 +1,24 @@
 <footer class="bg-white border-t border-borderGrey py-12">
-<div class="fixed bottom-20 right-6 z-50">
+<div class="fixed bottom-20 right-0 z-50">
   <a href="https://wa.me/+919873702365"
-    class="whatsapp-btn w-12 h-12 rounded-full flex items-center justify-center relative">
+    class="whatsapp-btn w-12 md:w-15 md:h-15 h-12 rounded-full flex items-center justify-center relative">
     <img src="assets/img/whatapp-image.webp" alt="WhatsApp" class="z-10">
     <span class="outer-ring"></span>
   </a>
   <a href="tel:+919873702365"
-    class="whatsapp-btn w-12 h-12 rounded-full flex items-center justify-center relative mt-2">
+    class="whatsapp-btn w-12 h-12 md:w-15 md:h-15 rounded-full flex items-center justify-center relative mt-5">
     <img src="assets/img/Call-Now.webp" alt="Call Now" class="z-10">
     <span class="outer-ring"></span>
   </a>
 </div>
-	  <div class="container flex justify-center mx-auto px-6 mb-5">
+ <div class="fixed bottom-1/2 right-[-50px] z-50 -rotate-90 bg-primary p-4 rounded-t-lg">
+  <button onclick="openEmiPopup()" class="text-white font-bold text-sm uppercase">
+    Emi Calculate
+  </button>
+</div>
+ </div>
+
+	  <div class="container flex justify-center mx-auto px-20 mb-5">
            <img  src="assets/img/logo.png" alt="Dwarka expressway logo - trusted real estate company" class="w-30">
             </div>
  
@@ -43,6 +50,90 @@
             </div>
          
         </div>
+<div
+  id="emiPopup"
+  class="fixed inset-0 z-50 hidden"
+>
+  <!-- Overlay -->
+  <div
+    onclick="closeEmiPopup()"
+    class="absolute inset-0 bg-black/70"
+  ></div>
+
+  <!-- Popup Box -->
+  <div
+    class="relative bg-white w-[380px] max-w-[90%] mx-auto top-1/2 -translate-y-1/2 p-6 rounded-xl border-t-4 border-primary shadow-xl"
+  >
+    <!-- Close -->
+    <button
+      onclick="closeEmiPopup()"
+      class="absolute top-3 right-3 text-2xl text-white hover:text-primary"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <h2 class="text-xl font-semibold text-dark mb-5">
+      EMI Calculator
+    </h2>
+
+    <!-- Loan Amount -->
+    <div class="mb-4">
+      <label class="block text-sm text-darkSecondary mb-1">
+        Loan Amount (₹)
+      </label>
+      <input
+      ::-webkit-inner-spin-button,::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+        id="loanAmount"
+        type="number"
+        placeholder="e.g. 5000000"
+        class="w-full px-3 py-2 border border-borderGrey rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+    </div>
+
+    <!-- Interest Rate -->
+    <div class="mb-4">
+      <label class="block text-sm text-darkSecondary mb-1">
+        Interest Rate (%)
+      </label>
+      <input
+        id="interestRate"
+        type="number"
+        placeholder="e.g. 8.5"
+        class="w-full px-3 py-2 border border-borderGrey rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+    </div>
+
+    <!-- Tenure -->
+    <div class="mb-5">
+      <label class="block text-sm text-darkSecondary mb-1">
+        Tenure (Years)
+      </label>
+      <input
+        id="loanTenure"
+        type="number"
+        placeholder="e.g. 20"
+        class="w-full px-3 py-2 border border-borderGrey rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+    </div>
+
+    <!-- Calculate -->
+    <button
+      onclick="calculateEMI()"
+      class="w-full bg-primary text-white py-3 rounded-md font-medium hover:opacity-90 transition"
+    >
+      Calculate EMI
+    </button>
+
+    <!-- Result -->
+    <div
+      id="emiResult"
+      class="mt-4 bg-lightGrey text-center py-3 rounded-md font-semibold text-dark"
+    ></div>
+  </div>
+</div>
 </footer>
 <script>
 
@@ -97,6 +188,122 @@
                     showform.classList.remove("hidden");
                 }
             }
+
+ const projectInput = document.getElementById("projectFilter");
+const locationInput = document.getElementById("locationFilter");
+const budgetInput = document.getElementById("budgetFilter");
+const cards = document.querySelectorAll(".project-card");
+const suggestionBox = document.getElementById("projectSuggestions");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const projectInput = document.getElementById("projectFilter");
+  const suggestionBox = document.getElementById("projectSuggestions");
+  const cards = document.querySelectorAll(".project-card");
+
+  // DEBUG (optional)
+  console.log("Cards found:", cards.length);
+
+  const projectNames = Array.from(cards)
+    .map(card => card.getAttribute("data-name"))
+    .filter(Boolean);
+
+  console.log("Project names:", projectNames);
+
+  projectInput.addEventListener("input", () => {
+    const value = projectInput.value.toLowerCase();
+    suggestionBox.innerHTML = "";
+
+    if (!value) {
+      suggestionBox.classList.add("hidden");
+      return;
+    }
+
+    const matches = projectNames.filter(name =>
+      name.toLowerCase().includes(value)
+    );
+
+    if (matches.length === 0) {
+      suggestionBox.classList.add("hidden");
+      return;
+    }
+
+    matches.forEach(name => {
+      const li = document.createElement("li");
+      li.textContent = name;
+      li.className =
+        "px-4 py-2 cursor-pointer hover:bg-gray-100 text-sm";
+
+      li.onclick = () => {
+        projectInput.value = name;
+        suggestionBox.classList.add("hidden");
+      };
+
+      suggestionBox.appendChild(li);
+    });
+
+    suggestionBox.classList.remove("hidden");
+  });
+
+  // Hide on outside click
+  document.addEventListener("click", e => {
+    if (!projectInput.contains(e.target)) {
+      suggestionBox.classList.add("hidden");
+    }
+  });
+
+});
+
+function filterProjects() {
+  const projectVal = projectInput.value.toLowerCase();
+  const locationVal = locationInput.value.toLowerCase();
+  const budgetVal = budgetInput.value;
+
+  cards.forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    const location = card.dataset.location.toLowerCase();
+    const price = parseFloat(card.dataset.price);
+
+    let budgetMatch = true;
+    if (budgetVal === "1") budgetMatch = price < 1;
+    if (budgetVal === "1-1.5") budgetMatch = price >= 1 && price <= 1.5;
+    if (budgetVal === "1.5-2") budgetMatch = price > 1.5 && price <= 2;
+    if (budgetVal === "2+") budgetMatch = price > 2;
+
+    const show =
+      name.includes(projectVal) &&
+      location.includes(locationVal) &&
+      budgetMatch;
+
+    card.style.display = show ? "block" : "none";
+  });
+}
+
+locationInput.addEventListener("input", filterProjects);
+budgetInput.addEventListener("change", filterProjects);    
+
+function openEmiPopup() {
+  document.getElementById("emiPopup").style.display = "block";
+}
+
+function closeEmiPopup() {
+  document.getElementById("emiPopup").style.display = "none";
+}
+
+function calculateEMI() {
+  const P = parseFloat(document.getElementById("loanAmount").value);
+  const R = parseFloat(document.getElementById("interestRate").value) / 12 / 100;
+  const N = parseFloat(document.getElementById("loanTenure").value) * 12;
+
+  if (!P || !R || !N) {
+    document.getElementById("emiResult").innerHTML = "Please enter all values";
+    return;
+  }
+
+  const EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+  document.getElementById("emiResult").innerHTML =
+    `Monthly EMI: ₹ ${EMI.toFixed(2)}`;
+}
 </script>
 </body>
 
