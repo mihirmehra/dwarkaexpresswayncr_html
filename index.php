@@ -634,7 +634,7 @@
             class="md:col-span-2 relative rounded-2xl overflow-hidden border border-borderGrey group project-card bg-white"
           >
             <img
-              src="https://images.unsplash.com/photo-1722604839931-77856e949ca6"
+              src=""
               alt="Spacious 3 BHK living room with floor-to-ceiling windows overlooking Dwarka Expressway"
               class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-700 group-hover:scale-105"
             />
@@ -1327,6 +1327,156 @@
         </div>
       </div>
     </section>
+
+    <section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-semibold text-center mb-16 text-[var(--dark)]">
+      Frequently Asked Questions 
+      <span class="">(FAQs)</span>
+    </h2>
+
+    <div class="max-w-3xl mx-auto space-y-6">
+
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          1. what is the USP of Dwarka Expressway Project?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+              Direct access to IGI Airport (Delhi) Seamless travel between Delhi and Gurgaon. Connectivity to NH-48 and Delhi–Mumbai Expressway
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          2. What Credentials should i verify in a real estate Consultant before buying a Property?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             ISO certified, RERA registration number (or local license), Professional body memberships (like NAR)
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          3. what is the distance and driving time from Dwarka expressway to IGI Airport?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             The distance is approximately 22.6 km, taking about 25 to 30 minutes via the NH-248BB/Dwarka Expressway.
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+         4. is there any power back up in dwarka expressway project?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             Yes, almost all residential projects on the Dwarka Expressway provide 100% power backup as a standard essential amenity.
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          5. Connectivity of Dwarka Expressway Projects?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             Dwarka Expressway projects offer signal-free connectivity to IGI Airport (15-20 mins), Cyber City, and Delhi via an 8-lane elevated corridor and the upcoming Metro extension.
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+         6. What Facilities are available in Dwarka Expressway projects?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             Grand clubhouses, 100% power backup, multi-tier security, and extensive sports facilities like swimming pools and gymnasiums.
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          7. Are there Hidden Charges Beyond the Base Price?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             No, you should budget for an additional 20–25% over the base price to cover "hidden" costs like GST (5%), Stamp Duty (5–7%), PLC (Preferential Location Charges), parking fees, and EDC/IDC (Development Charges)
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          8. How much Time it will take for whole Buying Process?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             The buying process typically takes 3 to 6 months, including 4–8 weeks for property shortlisting and another 4–6 weeks for legal due diligence, loan processing, and final registration.
+            </div>
+          </div>
+        </div>
+      </details>
+      <details class="group bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500">
+        <summary class="flex justify-between items-center px-6 py-4 cursor-pointer text-lg font-semibold text-[var(--dark)]">
+          9. Best Projects  on Dwarka Expressway ?
+          <span class="transition-transform duration-300 group-open:rotate-45 text-sm">
+            <i class="fa-solid fa-plus"></i>
+          </span>
+        </summary>
+        <div class="grid grid-rows-[0fr] transition-all duration-500 ease-in-out group-open:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+             Sobha City (sports lifestyle), M3M Mansion (ultra-luxury), Godrej Meridien (amenities), and Smart World One DXP for its strategic location at the Delhi-Gurgaon border.
+            </div>
+          </div>
+        </div>
+      </details>
+  
+    </div>
+  </div>
+</section>
 
     <!-- Contact Form -->
     <section
